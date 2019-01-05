@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-store_2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div id="pou_pup"></div>
+
+<div id="main_box_ppu_pap" class="main_box_ppu_pap"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">E-Store_2</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item" id="log_out">
+                <a class="nav-link" href="?#logout">Log out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <div class="row my-3">
+        <div class="col">
+            <h1 id="title">Login</h1>
+        </div>
+    </div>
+
+    <div id="login_form"></div>
+
+    <div class="row">
+        <div class="form-inline my-2 my-lg-0 col" style="margin-bottom: 10px !important;" id="searchBox">
+            <input id="s" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="search" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+        </div>
+    </div>
+
+
+    <form action="" class="your_chose" id="your_chose">
+        <fieldset class="field">
+
+            <input type="radio" name="q" id="1" class="search_gender search_gender_1" >
+            <input type="radio" name="q" id="2" class="search_gender search_gender_2">
+            <input type="radio" name="q" id="3" class="search_gender search_gender_3" checked>
+            <input type="radio" name="q" id="4" class="search_gender search_gander_4" checked>
+            <input type="radio" name="q" id="5" class="search_gender search_gander_5" checked>
+
+            <label for="1" class="gender gender_1">Men</label>
+            <label for="2" class="gender gender_2">Women</label>
+            <label for="3" class="gender gender_3">All</label>
+            <label for="4" class="gender gender_4">To top</label>
+            <label for="5" class="gender gender_5">To bottom</label>
+
+            <div class="target"></div>
+
+        </fieldset>
+    </form>
+
+
+    <div id="count"></div>
+    <div id="catalog" class="row catalog">
+
+    </div>
+
+    <nav id="pagination"></nav>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+<!--<script src="app_2.js"></script>-->
+
+</body>
+</html>
