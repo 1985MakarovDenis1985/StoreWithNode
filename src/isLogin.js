@@ -1,7 +1,9 @@
 import {Builder} from "./builder";
 import {FunctionLog} from "./fun_log";
+import {Config} from "./config";
 
 const fun_log = new FunctionLog();
+
 
 
 
@@ -120,16 +122,16 @@ export class IsLogin {
         // }
         
         console.log("submit");
-        
-        console.log(e.target[0].value);
-        console.log(e.target[1].value);
-        // console.log(document.getElementById("exampleInputPassword1").value);
+        // console.log(Config.get_server_url());
+        // console.log(e.target[0].value);
+        // console.log(e.target[1].value);
+        console.log(document.getElementById("exampleInputPassword1").value);
 
         const header = new Headers({
             "Content-Type": "application/json",
         })
 
-        fetch('http://localhost:9000/login', {
+        fetch(Config.getServerUrl()+"/login", {
             headers: header,
             method: "POST",
             body: JSON.stringify({
@@ -139,12 +141,16 @@ export class IsLogin {
         })
             .then(res => res.json())
             .then(res => {
-                console.log(res)
+                console.log(res);
                 if (res.status == "isLogin") {
                     localStorage.setItem("isLogin", true);
+                    localStorage.setItem("token", res.token);
                     location = location.origin;
                 }
             })
+        // localStorage.setItem("isLogin", true);
+        // location = location.origin;
     }
-}
+
+};
 

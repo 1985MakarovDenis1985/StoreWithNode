@@ -1,187 +1,191 @@
 import {IsLogin} from "./isLogin";
 import {Show} from "./show";
+// import {Catalog} from "./catalog";
+import {Config} from "./config";
+// console.log(Config.loadProducts());
+
+console.log(Config.modeProd());
 
 const isLogin = new IsLogin();
-
 let show = new Show();
 
-const products = [
-    {
-        "name": "Snikers #1",
-        "price": 205.50,
-        "data": 1,
-        "sex": "women",
-        "data-check": 1,
-        "image": "bg-01.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-    },
-    {
-        "name": "Snikers #2",
-        "price": 152.14,
-        "data": 2,
-        "sex": "men",
-        "data-check": 2,
-        "image": "bg-02.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-    },
-    {
-        "name": "Snikers #3",
-        "price": 103.22,
-        "data": 3,
-        "sex": "women",
-        "data-check": 3,
-        "image": "bg-03.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-    },
-    {
-        "name": "Snikers #4",
-        "price": 240.00,
-        "data": 4,
-        "sex": "women",
-        "data-check": 4,
-        "image": "bg-04.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-    },
-    {
-        "name": "Snikers #5",
-        "price": 180.30,
-        "data": 5,
-        "sex": "women",
-        "data-check": 5,
-        "image": "bg-05.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #6",
-        "price": 186.50,
-        "data": 6,
-        "sex": "children",
-        "data-check": 6,
-        "image": "bg-06.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-
-    {
-        "name": "Snikers #7",
-        "price": 111.60,
-        "data": 7,
-        "sex": "men",
-        "data-check": 7,
-        "image": "bg-07.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #8",
-        "price": 169.64,
-        "data": 8,
-        "sex": "women",
-        "data-check": 8,
-        "image": "bg-08.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "LeBron 16 #9",
-        "price": 215.20,
-        "data": 9,
-        "sex": "women",
-        "data-check": 9,
-        "image": "bg-09.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Nike Zoom KD11 #10",
-        "price": 245.00,
-        "data": 10,
-        "sex": "men",
-        "data-check": 10,
-        "image": "bg-10.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #11",
-        "price": 109.30,
-        "data": 11,
-        "sex": "children",
-        "data-check": 11,
-        "image": "bg-05.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #12",
-        "price": 198.50,
-        "data": 12,
-        "sex": "women",
-        "data-check": 12,
-        "image": "bg-06.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-
-    {
-        "name": "Snikers #13",
-        "price": 128.69,
-        "data": 13,
-        "sex": "women",
-        "data-check": 13,
-        "image": "bg-01.jpg",
-        "description": "These are very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #14",
-        "price": 179.00,
-        "data": 14,
-        "sex": "men",
-        "data-check": 14,
-        "image": "bg-02.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-    {
-        "name": "Snikers #15",
-        "price": 260.20,
-        "data": 15,
-        "sex": "children",
-        "data-check": 15,
-        "image": "bg-03.jpg",
-        "description": "This is very cool snikers. Nice beautiful and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-
-    {
-        "name": "Snikers #16",
-        "price": 301.20,
-        "data": 16,
-        "sex": "men",
-        "data-check": 16,
-        "image": "bg-03.jpg",
-        "description": "This is very cool snikers. Nice colorfull and quality",
-        "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
-
-    },
-];
+// const products = [
+//     {
+//         "name": "Snikers #1",
+//         "price": 205.50,
+//         "data": 1,
+//         "sex": "women",
+//         "data-check": 1,
+//         "image": "bg-01.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//     },
+//     {
+//         "name": "Snikers #2",
+//         "price": 152.14,
+//         "data": 2,
+//         "sex": "men",
+//         "data-check": 2,
+//         "image": "bg-02.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//     },
+//     {
+//         "name": "Snikers #3",
+//         "price": 103.22,
+//         "data": 3,
+//         "sex": "women",
+//         "data-check": 3,
+//         "image": "bg-03.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//     },
+//     {
+//         "name": "Snikers #4",
+//         "price": 240.00,
+//         "data": 4,
+//         "sex": "women",
+//         "data-check": 4,
+//         "image": "bg-04.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//     },
+//     {
+//         "name": "Snikers #5",
+//         "price": 180.30,
+//         "data": 5,
+//         "sex": "women",
+//         "data-check": 5,
+//         "image": "bg-05.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #6",
+//         "price": 186.50,
+//         "data": 6,
+//         "sex": "children",
+//         "data-check": 6,
+//         "image": "bg-06.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//
+//     {
+//         "name": "Snikers #7",
+//         "price": 111.60,
+//         "data": 7,
+//         "sex": "men",
+//         "data-check": 7,
+//         "image": "bg-07.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #8",
+//         "price": 169.64,
+//         "data": 8,
+//         "sex": "women",
+//         "data-check": 8,
+//         "image": "bg-08.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "LeBron 16 #9",
+//         "price": 215.20,
+//         "data": 9,
+//         "sex": "women",
+//         "data-check": 9,
+//         "image": "bg-09.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Nike Zoom KD11 #10",
+//         "price": 245.00,
+//         "data": 10,
+//         "sex": "men",
+//         "data-check": 10,
+//         "image": "bg-10.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #11",
+//         "price": 109.30,
+//         "data": 11,
+//         "sex": "children",
+//         "data-check": 11,
+//         "image": "bg-05.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #12",
+//         "price": 198.50,
+//         "data": 12,
+//         "sex": "women",
+//         "data-check": 12,
+//         "image": "bg-06.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//
+//     {
+//         "name": "Snikers #13",
+//         "price": 128.69,
+//         "data": 13,
+//         "sex": "women",
+//         "data-check": 13,
+//         "image": "bg-01.jpg",
+//         "description": "These are very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #14",
+//         "price": 179.00,
+//         "data": 14,
+//         "sex": "men",
+//         "data-check": 14,
+//         "image": "bg-02.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//     {
+//         "name": "Snikers #15",
+//         "price": 260.20,
+//         "data": 15,
+//         "sex": "children",
+//         "data-check": 15,
+//         "image": "bg-03.jpg",
+//         "description": "This is very cool snikers. Nice beautiful and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+//
+//     {
+//         "name": "Snikers #16",
+//         "price": 301.20,
+//         "data": 16,
+//         "sex": "men",
+//         "data-check": 16,
+//         "image": "bg-03.jpg",
+//         "description": "This is very cool snikers. Nice colorfull and quality",
+//         "more_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolor eaque magnam ut! Nam, temporibus vitae! Aspernatur dolores excepturi maiores neque numquam quasi voluptatibus."
+//
+//     },
+// ];
 
 const storage = localStorage.getItem("isLogin", "true_el")
 
@@ -197,10 +201,10 @@ let pagination = document.getElementById("pagination");
 let s = document.getElementById("s");
 let countText = document.getElementById("count");
 let numberGander = 0;
-let prodArr = products;
+let prodArr = Config.modeProd();
 
 
-countText.innerHTML = "quantity in this store: " + products.length;
+countText.innerHTML = "quantity in this store: " + prodArr.length;
 
 
 // func - createPag
@@ -341,7 +345,7 @@ function search_touch() {
         renderProducts(products_filter); // add
         countText.innerHTML = "your choose compose from:   " + products_filter.length + "  items";
     } else {
-        products_filter = products.filter((el) => reg.test(el.name) || reg.test(el.description));
+        products_filter = prodArr.filter((el) => reg.test(el.name) || reg.test(el.description));
         current = 0;
         s.value = "";
         renderProducts(products_filter); // add
@@ -388,10 +392,9 @@ function renderProducts(array_products) {
 //==================
 
 let z = document.getElementsByClassName("search_gender");
-let products_fil = products;
+let products_fil = Config.modeProd();
 let men = "men";
 let women = "women";
-let child = "children";
 let temp;
 
 let buttonCoast = document.getElementById("4");
@@ -415,7 +418,7 @@ let y = Array.from(z).map((el) => {
             priceForNumber()
             numberGander = 3;
             console.log(numberGander);
-            countText.innerHTML = "quantity in this store: " + products.length;
+            countText.innerHTML = "quantity in this store: " + prodArr.length;
         } else if (el.id == 4) {
             priceToTop(products_fil)
         } else if (el.id == 5) {
@@ -427,15 +430,15 @@ let y = Array.from(z).map((el) => {
 
 function filter_sex(sex) {
     current = 0;
-    products_fil = products.filter((el) => el.sex == sex);
+    products_fil = prodArr.filter((el) => el.sex == sex);
     renderProducts(products_fil); // add
     createPag(products_fil);// add
     countText.innerHTML = "your choose compose from:   " + products_fil.length + "  items";
 }
 
 
-function priceToTop(prodArr) {
-    // let prodArr = products;
+function priceToTop() {
+    let prodArr = Config.modeProd();
     current = 0;
 
     for (let i = 0; i < prodArr.length; i++) {
@@ -452,7 +455,7 @@ function priceToTop(prodArr) {
     countText.innerHTML = "quantity in this store: " + prodArr.length;
 }
 
-function priceToBottom(prodArr) {
+function priceToBottom() {
     // let prodArr = products;
     current = 0;
 
@@ -470,8 +473,8 @@ function priceToBottom(prodArr) {
     countText.innerHTML = "quantity in this store: " + prodArr.length;
 }
 
-function priceForNumber(prodArr) {
-    prodArr = products;
+function priceForNumber() {
+    prodArr = Config.modeProd();
     current = 0;
 
     for (let i = 0; i < prodArr.length; i++) {
@@ -548,67 +551,11 @@ function attachChilderToParent(html, array_el) {
 };
 
 
-///////////// LOGIN
-////// в упрощенном варианте
-// let log_form = document.getElementById("login_form")
-// function createHtmlElement() {
-//
-//     const labelEmail = createNewElement("label", "Email address", null, [{
-//         "name": "for",
-//         "value": "exampleInputEmail1"
-//     }]);
-//     const emailInput = createNewElement("input", null, "form-control", [
-//         {"name": "id", "value": "exampleInputEmail1"},
-//         {"name": "placeholder", "value": "Enter email"}
-//     ]);
-//     const small = createNewElement("small", "We'll never share your email with anyone else.", "form-text text-muted", [{
-//         "name": "id",
-//         "value": "emailHelp"
-//     }]);
-//
-//     let divEmail = attachChilderToParent(createNewElement("div", null, "form-group"), [labelEmail, emailInput, small]);
-//
-//
-//     const labelPass = createNewElement("label", "Password", null, [{"name": "for", "value": "exampleInputPassword1"}]);
-//     const passInput = createNewElement("input", null, "form-control", [
-//         {"name": "id", "value": "exampleInputPassword1"},
-//         {"name": "placeholder", "value": "Password"},
-//         {"name": "type", "value": "password"},
-//     ]);
-//
-//     let divPass = attachChilderToParent(createNewElement("div", null, "form-group"), [labelPass, passInput]);
-//
-//     const button = createNewElement("button", "Login", "btn btn-primary", [{"name": "type", "value": "submit"}]);
-//
-//     let form = attachChilderToParent(createNewElement("form", null, null, [{
-//         "name": "id",
-//         "value": "login_form"
-//     }]), [divEmail, divPass, button]);
-//
-//     log_form.appendChild(form);
-//
-//     document.getElementById("login_form").addEventListener("submit", submit(), false);
-// }
-// function submit() {
-//     console.log("submit");
-//     localStorage.setItem("isLogin", true);
-// }
-////////
-// document.getElementById("log_out").style.display = "none"
-
-// let l = document.getElementById("log_out");
-// l.addEventListener("click", (e) => {
-// });
-
-// if (location.hash == "logout"){
-//     localStorage.removeItem("isLogin");
-//     location = location.origin
-// }
-
 
 switch (location.hash) {
     case "#logout":
         localStorage.removeItem("isLogin");
+        localStorage.removeItem("token");
         location = location.origin;
     case "#card":
         console.log("Card");
@@ -617,15 +564,13 @@ switch (location.hash) {
             show.showButtonSearch();
             document.getElementById("title").innerHTML = "Catalog"
             document.getElementById("log_out").style.display = "block"
-            renderProducts(products);
+            renderProducts(Config.modeProd());
         }
         else {
             isLogin.createHtmlElement();
             document.getElementById("title").innerHTML = "login"
         }
 }
-
-
 
 /////////// IF LOGIN
 

@@ -1,7 +1,8 @@
+const server_url = "http://localhost:9000";
 
 
 
-const load_products = [
+const products = [
     {
         "name": "Snikers #1",
         "price": 205.50,
@@ -178,20 +179,14 @@ const load_products = [
 
     },
 ];
-
-
-
-
-
-let products = [];
-
+let prod;
 export class Config {
-
-    static loadProducts() {
-        return products = load_products;
+    static modeProd(){
+        return prod = products
     }
 
-    static getProducts() {
-        return products;
+    static getServerUrl() {
+        return server_url
     }
 }
+
